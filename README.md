@@ -13,4 +13,4 @@ A more detailed manual is coming soon.
 1. The UI file does not response while waiting for other players.
 2. More detailed instructions and comprehension questions as displayed in the original study.
 3. Reaction to dropout.
-4. Readability, organization and comments
+4. Readability, organization and comments.
