@@ -6,7 +6,7 @@ from client import communicate
 
 if __name__ == "__main__":
     # instantiate setting
-    setting = Setting(20 ,2)
+    setting = Setting(20,2)
 
     app = QApplication([])
     window = ExperimentWindow(setting)
