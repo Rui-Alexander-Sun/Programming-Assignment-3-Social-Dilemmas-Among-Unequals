@@ -32,17 +32,24 @@ class Client:
         # connect to the server
         self.server.connect((self.hostname, self.port))
         # send demographic information to the server
-        self.send_demographics()
+        self.init_info()
         self.running()
 
-    def send_demographics(self):
-        ''' send demographic information to the server '''
+    def init_info(self):
         demographics = [self.ppt_age,
                         self.ppt_gender,
                         self.ppt_edu,
                         self.ppt_race]
         msg = ("demo", demographics)
         self.send_msg(msg)
+
+        server_msg = self.server.recv(1024)
+        command, msg = pickle.loads(server_msg)
+        if command == 'init':
+            players_num, player_name = msg
+            self.name = player_name
+            self.window.init_result_table(players_num, player_name)
+        self.window.all_finished = True
 
     def send_contribution(self, result):
         '''
@@ -73,22 +80,15 @@ class Client:
     def close(self):
         self.server.close()
 
+
+
     def running(self):
         while True:
             # if the player has filled in demographic information,
             # receive message from the server and initialize the result table
-            if self.window.finished:
-                server_msg = self.server.recv(1024)
-                command, msg = pickle.loads(server_msg)
-                if command == 'init':
-                    players_num, player_name = msg
-                    self.name = player_name
-                    self.window.init_result_table(players_num, player_name)
-                self.window.all_finished = True
-                self.window.finished = False
             # if the player has contributed,
             # send their result and wait for other players
-            elif self.window.contributed:
+            if self.window.contributed:
                 income = self.window.income
                 contri = self.window.contribution
                 multiplier = self.window.multiplier
@@ -110,13 +110,7 @@ class Client:
                 self.window.display_result_and_payoff(msg)
                 self.window.contributed = False
                 self.window.all_finished = True
-                self.window.finished = False
 
 
-def communicate(setting, window):
-    no_client = True
-    # if there is not a client, create one after finishing the demographic page
-    while no_client:
-        if window.finished and no_client:
-            client = Client(setting, window)
-            no_client = False
+def create_client(setting, window):
+    client = Client(setting, window)

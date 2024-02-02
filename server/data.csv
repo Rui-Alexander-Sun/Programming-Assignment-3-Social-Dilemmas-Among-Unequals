@@ -1,5 +1,17 @@
 Session,Trial,Total players,Player name,Income,Multiplier,Contribution,Multiplied Contribution,Remains,Group contribution,Group multiplied contribution,Share per person,Payoff,Age,Gender,Education,Race
-1,1,1,Player 1,20.0,2,20,40,0.0,20,40,40.0,40.0,20,Female,High School,Black
-1,2,1,Player 1,40.0,2,11,22,29.0,11,22,22.0,51.0,20,Female,High School,Black
-2,1,1,Player 1,20.0,2,20,40,0.0,20,40,40.0,40.0,20,Male,High School,White
-2,2,1,Player 1,40.0,2,3,6,37.0,3,6,6.0,43.0,20,Male,High School,White
+1,1,1,Player 1,20.0,2.0,20,40.0,0.0,20,40.0,40.0,40.0,20,Female,High School,Black
+1,2,1,Player 1,40.0,2.0,11,22.0,29.0,11,22.0,22.0,51.0,20,Female,High School,Black
+2,1,1,Player 1,20.0,2.0,20,40.0,0.0,20,40.0,40.0,40.0,20,Male,High School,White
+2,2,1,Player 1,40.0,2.0,3,6.0,37.0,3,6.0,6.0,43.0,20,Male,High School,White
+3,1,1,Player 1,20.0,2.0,20,40.0,0.0,20,40.0,40.0,40.0,20,Female,Undergraduate,Black
+3,2,1,Player 1,40.0,2.0,32,64.0,8.0,32,64.0,64.0,72.0,20,Female,Undergraduate,Black
+4,1,1,Player 1,20.0,2.0,20,40.0,0.0,20,40.0,40.0,40.0,20,Female,High School,White
+4,2,1,Player 1,40.0,2.0,13,26.0,27.0,13,26.0,26.0,53.0,20,Female,High School,White
+5,1,1,Player 1,20.0,2.0,0,0.0,20.0,0,0.0,0.0,20.0,20,Male,Undergraduate,Black
+5,2,1,Player 1,20.0,2.0,1,2.0,19.0,1,2.0,2.0,21.0,20,Male,Undergraduate,Black
+6,1,3,Player 1,20.0,1.5,10,15.0,10.0,23,36.0,12.0,22.0,30,Male,High School,White
+6,1,3,Player 2,20.0,2.0,3,6.0,17.0,23,36.0,12.0,29.0,20,Male,High School,Asian
+6,1,3,Player 3,20.0,1.5,10,15.0,10.0,23,36.0,12.0,22.0,20,Female,Graduate,Asian
+6,2,3,Player 1,22.0,1.5,12,18.0,10.0,35,58.0,19.33,29.33,30,Male,High School,White
+6,2,3,Player 2,29.0,2.0,11,22.0,18.0,35,58.0,19.33,37.33,20,Male,High School,Asian
+6,2,3,Player 3,22.0,1.5,12,18.0,10.0,35,58.0,19.33,29.33,20,Female,Graduate,Asian

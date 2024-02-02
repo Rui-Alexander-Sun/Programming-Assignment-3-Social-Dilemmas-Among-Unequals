@@ -15,8 +15,7 @@ def calculate(contri_info):
     for player_info in contri_info:
         multiplied_contri = player_info[3]
         total += multiplied_contri
-    share_per_person = total / len(contri_info)
-    share_per_person = round(share_per_person, 2)
+    share_per_person = round(total / len(contri_info), 2)
     results = [total, share_per_person]
     return results
 

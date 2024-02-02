@@ -1,5 +1,7 @@
 from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt6.uic import loadUi
+from client import create_client
+from threading import Thread
 
 
 class ExperimentWindow(QMainWindow):
@@ -124,7 +126,11 @@ class ExperimentWindow(QMainWindow):
                 self.switch_to_next_page()
 
     def comprehension_check(self):
-        self.finished = True
+        # create a thread for communication between server computer and client
+        # while running the experiment
+        client_running = Thread(target=create_client,
+                                args=(self.setting, self,))
+        client_running.start()
         waiting = True
         # after finished the instructions, wait for other players
         while waiting:

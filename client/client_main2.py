@@ -5,7 +5,7 @@ from experiment_window import ExperimentWindow
 
 if __name__ == "__main__":
     # instantiate setting
-    setting = Setting(20,2)
+    setting = Setting(20,1.5)
 
     app = QApplication([])
     window = ExperimentWindow(setting)

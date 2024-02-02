@@ -2,8 +2,7 @@
 class Setting:
 
     def __init__(self):
-        self.players_num = 1
-        self.min_contri = 0
+        self.players_num = 2
 
         self.port = 1234
 
