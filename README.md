@@ -5,7 +5,7 @@ In the final assignment of our programming course, we were allowed to freely cho
 
 ## How to use
 
-See Description.docx for reference now.
+See [Description.docx](https://github.com/Rui-Alexander-Sun/Programming-Assignment-3-Social-Dilemmas-Among-Unequals/blob/main/Description.docx) for reference now.
 
 A more detailed manual is coming soon.
 
